@@ -1,0 +1,45 @@
+/*
+*@(#)GiaiPT.java.java  Jan 7, 2024
+*
+*Copyright (c) 2024 Chopper. All rights reserved.
+*/
+/**
+ * 
+ */
+package iuh.fit.duy;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+/*
+* @description:
+* @author: Chopper
+* @date: Jan 7, 2024
+* @version: 1.0
+*/
+
+/**
+ * 
+ */
+public class GiaiPT extends JFrame{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	JPanel pn1,pn2,pn3,pn4,pn5;
+	JButton btgiai,btxoa,btthoat;
+	JTextField soa,sob,soc,kq;
+	JLabel lbsoa,lbsob,lbsoc,lbkq;
+	public GiaiPT() {
+		super("Giải phương trình bậc 2");
+		
+		pn1.add(lbsoa = new JLabel("Số a:"));
+		pn1.add(soa = new JTextField());
+		
+		add(pn1);
+	}
+}

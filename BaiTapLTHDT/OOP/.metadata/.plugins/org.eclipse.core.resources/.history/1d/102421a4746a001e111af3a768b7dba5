@@ -1,0 +1,27 @@
+package iuh.fit.duy;
+
+import java.util.Scanner;
+
+public class MainSV {
+	public static void main(String[] args) {
+		try (Scanner sc = new Scanner(System.in)) {
+			DiemSinhVien sv1 = new DiemSinhVien(22662, "Huynh Le Minh Duy", 9.0f, 9.0f);
+			DiemSinhVien sv2 = new DiemSinhVien(22666, "Thai Hoang Phuc", 9.0f, 10.0f);
+			DiemSinhVien sv3 = new DiemSinhVien();
+			System.out.println("Nhap ma so sinh vien sv3:");
+			sv3.setMasv(sc.nextLong());
+//			sc.nextLine();
+//			System.out.println("Nhap ho va ten cua sinh vien sv3:");
+//			sv3.setHotensv(sc.nextLine());
+//			System.out.println("Nhap diem ly thuyet cua sinh vien sv3:");
+//			sv3.setDiemLT(sc.nextDouble());
+//			System.out.println("Nhap diem thuc hanh cua sinh vien sv3:");
+//			sv3.setDiemTH(sc.nextDouble());
+			
+			System.out.printf("%-5s %-30s %5s %5s %5s\n","masv","hoten","diemlt","diemth","diemtb");
+			System.out.println(sv1);
+			System.out.println(sv2);
+			System.out.println(sv3);
+		}
+	}
+}

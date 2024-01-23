@@ -1,0 +1,43 @@
+/*
+*@(#)JList_CheckBox.java.java  Jan 17, 2024
+*
+*Copyright (c) 2024 Chopper. All rights reserved.
+*/
+/**
+ * 
+ */
+package iuh.fit.duy;
+
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+
+/*
+* @description:
+* @author: Chopper
+* @date: Jan 17, 2024
+* @version: 1.0
+*/
+
+/**
+ * 
+ */
+public class JList_CheckBox extends JFrame{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JPanel CenPan,WestPan,SouPan,NorPan,ButtonPan,Nor_CenPan;
+	private JLabel InputNum,Title;
+	private JButton todensochan,todensole,todensonguyento,botoden,xoacacgiatridangtoden,tonggiatri,nhap,dong;
+	private JList<Integer> list_num;
+	public JList_CheckBox() {
+		//Title
+		NorPan.add(Title = new JLabel("Thao tác trên JList - Checkbox"));
+		
+	}
+}

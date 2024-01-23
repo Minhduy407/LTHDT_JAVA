@@ -1,0 +1,54 @@
+package hsk;
+/*
+*@(#)Bai1.java.java  Dec 27, 2023
+*
+*Copyright (c) 2023 Chopper. All rights reserved.
+*/
+/**
+ * 
+ */
+/*
+* @description:
+* @author: Chopper
+* @date: Dec 27, 2023
+* @version: 1.0
+*/
+
+import java.awt.Button;
+
+import javax.swing.*;
+
+/**
+ * 
+ */
+public class Bai1 extends JFrame{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	JTextField textS1,textS2,textKQ;
+	public Bai1() {
+		super("Bai 1");
+		JLabel l1,l2,kq;
+		JPanel jp = new JPanel();
+		
+		jp.add(l1 = new JLabel ("Số 1:"));
+		jp.add(textS1=new JTextField(45));
+		jp.add(l2 = new JLabel ("Số 2:"));
+		jp.add(textS2=new JTextField(45));
+		jp.add(kq = new JLabel ("Kết quả:"));
+		jp.add(textKQ=new JTextField(43));
+		jp.add(new Button("Cộng"));
+		jp.add(new Button("Trừ"));
+		jp.add(new Button("Thoát"));
+		add(jp);
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(530,200);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new Bai1();
+	}
+}
+

@@ -1,0 +1,18 @@
+
+Khách Hàng:
+CMND: 123
+Tên: A
+Ga đến: TPHCM
+Giá tiền: 300,000.0 VNĐ
+
+Khách Hàng:
+CMND: 122
+Tên: C
+Ga đến: TPHN
+Giá tiền: 600,000.0 VNĐ
+
+Khách Hàng:
+CMND: 121
+Tên: B
+Ga đến: TPHCM
+Giá tiền: 300,000.0 VNĐ

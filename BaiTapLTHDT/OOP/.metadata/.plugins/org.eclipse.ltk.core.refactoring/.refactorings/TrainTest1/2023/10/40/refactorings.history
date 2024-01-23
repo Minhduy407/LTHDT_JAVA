@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;iuh.fit.chopper.GDDat.loaiDat&apos; in &apos;iuh.fit.chopper.GDDat&apos;&#x0D;&#x0A;- Original project: &apos;TrainTest1&apos;&#x0D;&#x0A;- Original element: &apos;iuh.fit.chopper.GDDat.loaiDat&apos;&#x0D;&#x0A;- Getter method name: &apos;getLoaiDat&apos;&#x0D;&#x0A;- Setter method name: &apos;setLoaiDat&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type&#x0D;&#x0A;- Generate method comments" comments="true" declaring="true" description="Encapsulate field &apos;loaiDat&apos;" flags="589830" getter="getLoaiDat" id="org.eclipse.jdt.ui.self.encapsulate" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;iuh.fit.chopper{GDDat.java[GDDat^loaiDat" insertion="0" setter="setLoaiDat" stamp="1696230438131" version="1.0" visibility="1"/>
+</session>

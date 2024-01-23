@@ -1,0 +1,72 @@
+package iuh.fit.chopper;
+
+import java.util.Scanner;
+
+public class CDTester {
+	public static void main(String[] args) {
+		QuanLyCD cds = new QuanLyCD("CD VN",100);
+		System.out.println("Day la bo quan ly CD" + cds.getTenBoQuanLyCD());
+		int chon = 0;
+		Scanner sc = new Scanner(System.in);
+        do{
+            System.out.println("Menu");
+            System.out.println("1. Tao CD");
+            System.out.println("2. In ra so luong CD co trong danh sach");
+            System.out.println("3. In ra tong gia thanh cua cac CD");
+            System.out.println("4. Sap xep danh sach CD giam dan theo gia thanh");
+            System.out.println("5. Sap xep danh sach CD tang dan theo tua CD");
+            System.out.println("6. In ra toan bo CD trong danh sach");
+            System.out.println("7. Thoat");
+            System.out.println("Enter your choice: ");
+            chon = sc.nextInt();
+            sc.nextLine();
+            switch(chon) {
+            case 1:{
+            	System.out.println("Nhap vao ma CD: ");
+            	long ma = sc.nextLong();
+            	sc.nextLine();
+            	System.out.println("Nhap vao ten CD: ");
+            	String name = sc.nextLine();
+            	
+            	System.out.println("Nhap vao so bai hat CD: ");
+            	long sobai = sc.nextLong();
+            	
+            	System.out.println("Nhap vao gia thanh CD: ");
+            	double g = sc.nextDouble();
+            	
+            	cds.addNewCD(ma, name, sobai, sobai);
+         
+            	break;
+            }
+            case 2:{
+            	System.out.println(cds.laysoCD());
+            	break;
+            }
+            case 3:{
+            	System.out.println(cds.tongGiaThanhCD());
+            	break;
+            }
+            case 4:{
+            	cds.sortGT();
+            	System.out.println("Da sap xep");
+            	break;
+            }
+            case 5:{
+            	cds.sortTCD();
+            	System.out.println("Da sap xep");
+            	break;
+            }
+            case 6:{
+            	System.out.println("--------So CD-------");
+            	cds.toString();
+            	break;
+            }
+            case 7:{
+            	System.out.println("Ket thuc chuong trinh");
+            	break;
+            }
+            }
+        }while(chon < 8);
+	}
+
+}

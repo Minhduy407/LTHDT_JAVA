@@ -1,0 +1,99 @@
+/*
+*@(#)GiaiPT.java.java  Jan 7, 2024
+*
+*Copyright (c) 2024 Chopper. All rights reserved.
+*/
+/**
+ * 
+ */
+package iuh.fit.duy;
+
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.TitledBorder;
+
+/*
+* @description:
+* @author: Chopper
+* @date: Jan 7, 2024
+* @version: 1.0
+*/
+
+/**
+ * 
+ */
+public class GiaiPT extends JFrame implements ActionListener{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	JPanel pn1,pn2,pn3,pn4,pn5,pn,pnphu;
+	JButton btgiai,btxoa,btthoat;
+	JTextField soa,sob,soc,kq;
+	JLabel lbtieude,lbsoa,lbsob,lbsoc,lbkq;
+	public GiaiPT() {
+		super("Giải phương trình bậc 2");
+		
+		pnphu = new JPanel();
+		pn = new JPanel();
+		pn1 = new JPanel();
+		pn2 = new JPanel();
+		pn3 = new JPanel();
+		pn4 = new JPanel();
+		pn5 = new JPanel();
+		
+		pn.add(lbtieude = new JLabel("Giải phương trình bậc 2"));
+		
+		pn1.add(lbsoa = new JLabel("Nhập a:"));
+		pn1.add(soa = new JTextField(40));
+		pn2.add(lbsob = new JLabel("Nhập b:"));
+		pn2.add(sob = new JTextField(40));
+		pn3.add(lbsoc = new JLabel("Nhập c:"));
+		pn3.add(soc = new JTextField(40));
+		pn4.add(lbkq = new JLabel("Kết quả:"));
+		kq = new JTextField(40);
+		kq.setEditable(false);
+		pn4.add(kq);
+		
+		pn5.add(btgiai = new JButton("Giải"));
+		pn5.add(btxoa = new JButton("Xóa"));
+		pn5.add(btthoat = new JButton("Thoát"));
+		TitledBorder bd = new TitledBorder("Chọn tác vụ");
+		pn5.setBorder(bd);
+		btgiai.addActionListener(this);
+		btxoa.addActionListener(this);
+		btthoat.addActionListener(this);
+		
+		pnphu.add(pn1);
+		pnphu.add(pn2);
+		pnphu.add(pn3);
+		pnphu.add(pn4);
+		
+		pnphu.setLayout(new GridLayout(4, 1));
+		
+		add(pn,BorderLayout.NORTH);
+		add(pnphu,BorderLayout.CENTER);
+		add(pn5,BorderLayout.SOUTH);
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(500,300);
+		setResizable(false);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new GiaiPT();
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+}

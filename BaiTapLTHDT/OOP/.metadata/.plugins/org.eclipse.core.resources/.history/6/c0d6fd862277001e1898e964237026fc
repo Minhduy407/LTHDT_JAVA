@@ -1,0 +1,28 @@
+package ktpm18a.test;
+
+import java.util.Queue;
+
+import ktpm18a.duy.*;
+import ktpm18a.main.QuanLyKhachHang;
+
+public class MainTest {
+	public static void main(String[] args) {
+		QuanLyKhachHang list = new QuanLyKhachHang();
+		KhachHang kh1 = new KhachHang("123","A","TPHCM",300000.0);
+		KhachHang kh2 = new KhachHang("122","C","TPHN",600000.0);
+		KhachHang kh3 = new KhachHang("121","B","TPHP",300000.0);
+		
+		list.themkhach(kh1);
+		list.themkhach(kh2);
+		list.themkhach(kh3);
+		
+		Queue<KhachHang> khs = list.getKhs();
+		khs.forEach(x -> System.out.println(x));
+		
+		Queue<KhachHang> khs1 = list.remove1KH("122");
+		khs1.forEach(x -> System.out.println(x));
+		
+		list.dsga()
+		.forEach(System.out::println);
+	}
+}

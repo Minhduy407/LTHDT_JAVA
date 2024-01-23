@@ -1,0 +1,29 @@
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaPostfixProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000org.eclipse.jdt.ui.javaChainProposalCategory\u0000
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="java.text.NumberFormat"><rhs name\="java.text.DecimalFormat"/></lhs><lhs name\="java.text.Format"><rhs name\="java.text.DecimalFormat"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="java.text.DecimalFormat"/></lhs><lhs name\="java.text.DecimalFormat"><rhs name\="java.text.DecimalFormat"/></lhs><lhs name\="java.lang.Enum"><rhs name\="Chopper.TienTe"/><rhs name\="iuh.fit.cr.DanhGia"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="Chopper.TienTe"/><rhs name\="iuh.fit.cr.DanhGia"/></lhs><lhs name\="Chopper.TienTe"><rhs name\="Chopper.TienTe"/></lhs><lhs name\="Chopper.GiaoDich"><rhs name\="Chopper.GDVang"/><rhs name\="Chopper.GDTienTe"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.LinkedList"/><rhs name\="java.util.HashSet"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.LinkedList"/><rhs name\="java.util.HashSet"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.Set"><rhs name\="java.util.HashSet"/></lhs><lhs name\="iuh.fit.chopper.SalariedEmployee"><rhs name\="iuh.fit.chopper.Manager"/></lhs><lhs name\="iuh.fit.chopper.Employee"><rhs name\="iuh.fit.chopper.Manager"/><rhs name\="iuh.fit.chopper.SalariedEmployee"/><rhs name\="iuh.fit.chopper.HourlyEmployee"/></lhs><lhs name\="iuh.fit.chopper.Manager"><rhs name\="iuh.fit.chopper.Manager"/></lhs><lhs name\="iuh.fit.chopper.HourlyEmployee"><rhs name\="iuh.fit.chopper.HourlyEmployee"/></lhs><lhs name\="iuh.fit.chopper.GiaoDich"><rhs name\="iuh.fit.chopper.GDDat"/></lhs><lhs name\="iuh.fit.cr.DanhGia"><rhs name\="iuh.fit.cr.DanhGia"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.LinkedList"/><rhs name\="java.util.ArrayList"/></lhs><lhs name\="iuh.fit.cr.NhanVien"><rhs name\="iuh.fit.cr.NhanVienKyThuat"/><rhs name\="iuh.fit.cr.NhanVienBanHang"/></lhs><lhs name\="iuh.fit.ql.CongTy"><rhs name\="iuh.fit.ql.QuanLyNhanVien"/></lhs><lhs name\="iuh.fit.ql.QuanLyNhanVien"><rhs name\="iuh.fit.ql.QuanLyNhanVien"/></lhs><lhs name\="iuh.fit.cr.NhanVienBanHang"><rhs name\="iuh.fit.cr.NhanVienBanHang"/></lhs><lhs name\="java.time.temporal.Temporal"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="java.time.temporal.TemporalAccessor"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="java.time.temporal.TemporalAdjuster"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="java.time.chrono.ChronoLocalDate"><rhs name\="java.time.LocalDate"/></lhs><lhs name\="duy.cr.CaNhan"><rhs name\="duy.cr.BenhNhan"/></lhs><lhs name\="duy.cr.BenhNhan"><rhs name\="duy.cr.BenhNhan"/></lhs><lhs name\="iuh.fit.entity.FullName"><rhs name\="iuh.fit.entity.Experience"/></lhs><lhs name\="iuh.fit.entity.Employee"><rhs name\="iuh.fit.entity.Experience"/></lhs></history>
+content_assist_number_of_computers=20
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.exception.name=e
+org.eclipse.jdt.ui.formatterprofiles.version=23
+org.eclipse.jdt.ui.gettersetter.use.is=true
+org.eclipse.jdt.ui.javadoc=true
+org.eclipse.jdt.ui.overrideannotation=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="false" context\="newtype_context" deleted\="false" description\="Newly created files" enabled\="true" id\="org.eclipse.jdt.ui.text.codetemplates.newtype" name\="newtype">/*\r\n*@(\#)${file_name}.java  ${date}\r\n*\r\n*Copyright (c) ${year} Chopper. All rights reserved.\r\n*/\r\n${filecomment}\r\n${package_declaration}\r\n/*\r\n* @description\:\r\n* @author\: Chopper\r\n* @date\: ${date}\r\n* @version\: 1.0\r\n*/\r\n\r\n${typecomment}\r\n${type_declaration}</template></templates>
+sourceHoverBackgroundColor=255,255,225
+spelling_ignore_ampersand_in_properties=true
+spelling_ignore_digits=true
+spelling_ignore_java_strings=true
+spelling_ignore_mixed=true
+spelling_ignore_non_letters=true
+spelling_ignore_sentence=true
+spelling_ignore_single_letters=true
+spelling_ignore_upper=true
+spelling_ignore_urls=true
+spelling_locale_initialized=true
+spelling_user_dictionary_encoding=
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

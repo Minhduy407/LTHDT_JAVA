@@ -1,0 +1,86 @@
+package iuh.fit.duy;
+
+public class DiemSinhVien {
+	private int masv;
+	private String hotensv;
+	private double diemLT,diemTH;
+	
+	/**
+	 * 
+	 */
+	public DiemSinhVien() {
+		this(1,"No name",0.0,0.0);
+	}
+	/**
+	 * @param masv
+	 * @param hotensv
+	 * @param diemLT
+	 * @param diemTH
+	 */
+	public DiemSinhVien(int masv, String hotensv, double diemLT, double diemTH) {
+		if(masv < 0) this.masv = 1;
+		this.masv = masv;
+		if(hotensv == null) this.hotensv = "No name";
+		this.hotensv = hotensv;
+		if(diemLT < 0.0 || diemLT > 10.0) this.diemLT = 0.0;
+		this.diemLT = diemLT;
+		if(diemTH < 0.0 || diemTH > 10.0) this.diemTH = 0.0;
+		this.diemTH = diemTH;
+	}
+	/**
+	 * @return the masv
+	 */
+	public int getMasv() {
+		return masv;
+	}
+	/**
+	 * @param masv the masv to set
+	 */
+	public void setMasv(int masv) {
+		this.masv = masv;
+	}
+	/**
+	 * @return the hotensv
+	 */
+	public String getHotensv() {
+		return hotensv;
+	}
+	/**
+	 * @param hotensv the hotensv to set
+	 */
+	public void setHotensv(String hotensv) {
+		this.hotensv = hotensv;
+	}
+	/**
+	 * @return the diemLT
+	 */
+	public double getDiemLT() {
+		return diemLT;
+	}
+	/**
+	 * @param diemLT the diemLT to set
+	 */
+	public void setDiemLT(double diemLT) {
+		this.diemLT = diemLT;
+	}
+	/**
+	 * @return the diemTH
+	 */
+	public double getDiemTH() {
+		return diemTH;
+	}
+	/**
+	 * @param diemTH the diemTH to set
+	 */
+	public void setDiemTH(double diemTH) {
+		this.diemTH = diemTH;
+	}
+	
+	public double diemtrungbinh() {
+		return (diemLT + diemTH) / 2;
+	}
+	
+	public void in() {
+		System.out.printf("%-5d %-30s %5.2lf %5.2f %5.2f",masv,hotensv,diemLT,diemTH,diemtrungbinh());
+	}
+}

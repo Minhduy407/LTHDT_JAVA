@@ -1,0 +1,104 @@
+package hsk;
+/*
+*@(#)Bai1.java.java  Dec 27, 2023
+*
+*Copyright (c) 2023 Chopper. All rights reserved.
+*/
+/**
+ * 
+ */
+/*
+* @description:
+* @author: Chopper
+* @date: Dec 27, 2023
+* @version: 1.0
+*/
+
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+
+
+/**
+ * 
+ */
+public class Bai1 extends JFrame implements ActionListener{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	JTextField textS1,textS2,textKQ;
+	JLabel l1,l2,kq;
+	JButton bt1,bt2,bt3;
+	public Bai1() {
+		super("Bai 1");
+		
+		JPanel jp = new JPanel();
+		JPanel jp1 = new JPanel();
+		JPanel jp2 = new JPanel();
+		JPanel jp3 = new JPanel();
+		
+		jp.add(l1 = new JLabel ("Số 1:"));
+		jp.add(textS1=new JTextField(40));
+		jp1.add(l2 = new JLabel ("Số 2:"));
+		jp1.add(textS2=new JTextField(40));
+		jp2.add(kq = new JLabel ("Kết quả:"));
+		textKQ=new JTextField(40);
+		textKQ.setBackground(Color.GRAY);
+		textKQ.setEditable(false);
+		jp2.add(textKQ);
+		bt1 = new JButton("Cộng");
+		jp3.add(bt1);
+		bt2 = new JButton("Trừ");
+		jp3.add(bt2);
+		bt3 = new JButton("Thoát");
+		jp3.add(bt3);
+		
+		bt1.addActionListener(this);
+		bt2.addActionListener(this);
+		bt3.addActionListener(this);
+		
+		jp.setSize(100, 200);
+		
+		add(jp);
+		add(jp1);
+		add(jp2);
+		add(jp3);
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(500,200);
+		setLayout(new FlowLayout());
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new Bai1();
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object source = e.getSource();
+		double so1,so2;
+		if(textS1.getText().isEmpty())
+			so1 = 0;
+		else 
+			so1 = Double.parseDouble(textS1.getText());
+		if(textS2.getText().isEmpty())
+			so2 = 0;
+		else 
+			so2 = Double.parseDouble(textS2.getText());
+		if(source.equals(bt1)) {
+			textKQ.setText(String.valueOf(so1 + so2));
+		}
+		else if(source.equals(bt2))
+			textKQ.setText(String.valueOf(so1 - so2));
+		else
+			System.exit(1);
+		
+	}
+	
+}
+

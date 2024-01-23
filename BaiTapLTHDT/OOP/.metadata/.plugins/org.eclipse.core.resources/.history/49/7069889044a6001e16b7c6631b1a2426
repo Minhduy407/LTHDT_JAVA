@@ -1,0 +1,129 @@
+/*
+*@(#)Bai2.java.java  Dec 29, 2023
+*
+*Copyright (c) 2023 Chopper. All rights reserved.
+*/
+/**
+ * 
+ */
+package hsk;
+/*
+* @description:
+* @author: Chopper
+* @date: Dec 29, 2023
+* @version: 1.0
+*/
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
+/**
+ * 
+ */
+public class Bai2 extends JFrame implements ActionListener,ItemListener{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	JRadioButton rbt1,rbt2;
+	JTextField textS1,textS2,textKQ;
+	JLabel l1,l2,kq;
+	JButton bt1,bt2,bt3;
+	public Bai2() {
+		super("Bai 2");
+		
+		JPanel jp = new JPanel();
+		JPanel jp1 = new JPanel();
+		JPanel jp2 = new JPanel();
+		JPanel jp3 = new JPanel();
+		JPanel jp4 = new JPanel();
+		
+		jp.add(l1 = new JLabel ("Số 1:"));
+		jp.add(textS1=new JTextField(40));
+		jp1.add(l2 = new JLabel ("Số 2:"));
+		jp1.add(textS2=new JTextField(40));
+		jp2.add(kq = new JLabel ("Kết quả:"));
+		textKQ=new JTextField(40);
+		textKQ.setBackground(Color.GRAY);
+		textKQ.setEditable(false);
+		jp2.add(textKQ);
+		
+		rbt1 = new JRadioButton("Cộng");
+		rbt1.setBounds(100, 100, 170, 30);
+		jp3.add(rbt1);
+		rbt2 = new JRadioButton("Trừ");
+		rbt2.setBounds(100, 100, 170, 30);
+		jp3.add(rbt2);
+		
+		bt1 = new JButton("Giai");
+		jp4.add(bt1);
+		bt2 = new JButton("Xoa");
+		jp4.add(bt2);
+		bt3 = new JButton("Thoat");
+		jp4.add(bt3);
+		
+		bt1.addActionListener(this);
+		bt2.addActionListener(this);
+		bt3.addActionListener(this);
+		
+		
+		jp.setSize(100, 200);
+		jp1.setSize(100, 200);
+		jp2.setSize(100, 200);
+		jp3.setSize(100, 200);
+		jp4.setSize(100, 200);
+		
+		add(jp);
+		add(jp1);
+		add(jp2);
+		add(jp3);
+		add(jp4);
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(500,200);
+		setLayout(new FlowLayout());
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new Bai2();
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object source = e.getSource();
+		double so1,so2;
+		if(textS1.getText().isEmpty())
+			so1 = 0;
+		else 
+			so1 = Double.parseDouble(textS1.getText());
+		if(textS2.getText().isEmpty())
+			so2 = 0;
+		else 
+			so2 = Double.parseDouble(textS2.getText());
+		if(source.equals(bt1)) {
+			textKQ.setText(String.valueOf(so1 + so2));
+		}
+		else if(source.equals(bt2))
+			textKQ.setText(String.valueOf(so1 - so2));
+		else
+			System.exit(1);
+		
+	}
+	@Override
+	public void itemStateChanged(ItemEvent e) {
+		
+	}
+
+}

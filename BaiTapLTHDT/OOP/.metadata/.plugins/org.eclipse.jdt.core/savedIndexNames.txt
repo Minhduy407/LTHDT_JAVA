@@ -1,0 +1,7 @@
+INDEX VERSION 1.134+D:\KTPM18A_2022_\LTHDT\BaiTapLTHDT\OOP\.metadata\.plugins\org.eclipse.jdt.core
+4100516655.index
+1865797976.index
+1605147981.index
+3474161884.index
+3088363594.index
+1485921444.index

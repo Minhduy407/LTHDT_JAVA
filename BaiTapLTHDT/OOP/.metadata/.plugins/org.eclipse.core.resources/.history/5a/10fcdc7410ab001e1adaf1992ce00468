@@ -1,0 +1,141 @@
+/*
+*@(#)Bai2.java.java  Dec 29, 2023
+*
+*Copyright (c) 2023 Chopper. All rights reserved.
+*/
+/**
+ * 
+ */
+package hsk;
+/*
+* @description:
+* @author: Chopper
+* @date: Dec 29, 2023
+* @version: 1.0
+*/
+
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+
+/**
+ * 
+ */
+public class Bai2 extends JFrame implements ActionListener{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private JRadioButton rbt1,rbt2;
+	private JTextField textS1,textS2,textKQ;
+	JLabel l1,l2,kq;
+	private JButton bt1,bt2,bt3;
+	public Bai2() {
+		super("Bai 2");
+		Box box = Box.createVerticalBox();
+		setLayout(box);
+		
+		JPanel jp = new JPanel();
+		JPanel jp1 = new JPanel();
+		JPanel jp2 = new JPanel();
+		JPanel jp3 = new JPanel();
+		JPanel jp4 = new JPanel();
+		
+		jp.add(l1 = new JLabel ("Số 1:"));
+		jp.add(textS1=new JTextField(15));
+		jp1.add(l2 = new JLabel ("Số 2:"));
+		jp1.add(textS2=new JTextField(15));
+		jp2.add(kq = new JLabel ("Kết quả:"));
+		textKQ=new JTextField(10);
+		textKQ.setBackground(Color.GRAY);
+		textKQ.setEditable(false);
+		jp2.add(textKQ);
+		
+		ButtonGroup bt = new ButtonGroup();
+		rbt1 = new JRadioButton("Cộng");
+	
+		bt.add(rbt1);
+		rbt2 = new JRadioButton("Trừ");
+		
+		bt.add(rbt2);
+		
+		jp3.add(rbt1);
+		jp3.add(rbt2);
+		
+		bt1 = new JButton("Giai");
+		jp4.add(bt1);
+		bt2 = new JButton("Xoa");
+		jp4.add(bt2);
+		bt3 = new JButton("Thoat");
+		jp4.add(bt3);
+		
+		bt1.addActionListener(this);
+		bt2.addActionListener(this);
+		bt3.addActionListener(this);
+		
+		
+		jp.setSize(100, 200);
+		jp1.setSize(100, 200);
+		jp2.setSize(100, 200);
+		jp3.setSize(100, 200);
+		jp4.setSize(100, 200);
+		
+		add(jp);
+		add(jp1);
+		add(jp2);
+		add(jp3);
+		add(jp4);
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(210,250);
+		setLayout(new FlowLayout());
+		setVisible(true);
+		setResizable(false);
+	}
+	public static void main(String[] args) {
+		new Bai2();
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object source = e.getSource();
+		double so1,so2;
+		if(textS1.getText().isEmpty())
+			so1 = 0;
+		else 
+			so1 = Double.parseDouble(textS1.getText());
+		if(textS2.getText().isEmpty())
+			so2 = 0;
+		else 
+			so2 = Double.parseDouble(textS2.getText());
+		if(source.equals(bt1)) {
+			if(rbt1.isSelected())
+				textKQ.setText(Double.toString(so1 + so2));
+			else if(rbt2.isSelected())
+				textKQ.setText(Double.toString(so1 - so2));
+			else
+				JOptionPane.showMessageDialog(null, "Chua chon phep tinh");
+		}
+		else if(source.equals(bt2)) {
+			textS1.setText(null);
+			textS2.setText(null);
+			textKQ.setText(null);
+		}
+		else
+			System.exit(1);
+		
+	}
+}

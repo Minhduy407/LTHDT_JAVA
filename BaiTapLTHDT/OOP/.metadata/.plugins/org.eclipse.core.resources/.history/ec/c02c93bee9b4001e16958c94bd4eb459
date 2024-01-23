@@ -1,0 +1,67 @@
+/*
+*@(#)JList_CheckBox.java.java  Jan 17, 2024
+*
+*Copyright (c) 2024 Chopper. All rights reserved.
+*/
+/**
+ * 
+ */
+package iuh.fit.duy;
+
+
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+
+/*
+* @description:
+* @author: Chopper
+* @date: Jan 17, 2024
+* @version: 1.0
+*/
+
+/**
+ * 
+ */
+public class JList_CheckBox extends JFrame{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private JPanel CenPan,WestPan,SouPan,NorPan,ButtonPan,Nor_CenPan;
+	private JLabel InputNum,Title;
+	private JButton todensochan,todensole,todensonguyento,botoden,xoacacgiatridangtoden,tonggiatri,nhap,dong;
+	private JList<Integer> list_num;
+	public JList_CheckBox() {
+		CenPan = new JPanel();
+		WestPan = new JPanel();
+		SouPan = new JPanel();
+		NorPan = new JPanel();
+		ButtonPan = new JPanel();
+		Nor_CenPan = new JPanel();
+		//Nor
+		NorPan.add(Title = new JLabel("Thao tác trên JList - Checkbox"));
+		add(NorPan);
+		
+		//West
+		ButtonPan.add(todensochan = new JButton("Tô đen số chẵn"));
+		ButtonPan.add(todensole = new JButton("Tô đen số lẻ"));
+		ButtonPan.add(todensonguyento = new JButton("Tô đen số nguyên tố"));
+		ButtonPan.add(botoden = new JButton("Bỏ tô đen"));
+		ButtonPan.add(xoacacgiatridangtoden = new JButton("Xóa các giá trị đang tô đen"));
+		ButtonPan.add(tonggiatri = new JButton("Tổng giá trị trong JList"));
+		ButtonPan.setLayout(new GridLayout(0, 1, 1, 1));
+		WestPan.add(ButtonPan);
+		WestPan.setBorder(BorderFactory.createTitledBorder("Chọn tác vụ"));
+		add(WestPan);
+	}
+	public static void main(String[] args) {
+		new JList_CheckBox();
+	}
+}

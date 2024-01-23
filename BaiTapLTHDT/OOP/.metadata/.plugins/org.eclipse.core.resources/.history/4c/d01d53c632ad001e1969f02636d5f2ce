@@ -1,0 +1,71 @@
+/*
+*@(#)GiaiPT.java.java  Jan 7, 2024
+*
+*Copyright (c) 2024 Chopper. All rights reserved.
+*/
+/**
+ * 
+ */
+package iuh.fit.duy;
+
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+/*
+* @description:
+* @author: Chopper
+* @date: Jan 7, 2024
+* @version: 1.0
+*/
+
+/**
+ * 
+ */
+public class GiaiPT extends JFrame{
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	JPanel pn1,pn2,pn3,pn4,pn5;
+	JButton btgiai,btxoa,btthoat;
+	JTextField soa,sob,soc,kq;
+	JLabel lbsoa,lbsob,lbsoc,lbkq;
+	public GiaiPT() {
+		super("Giải phương trình bậc 2");
+		
+		pn1 = new JPanel();
+		pn2 = new JPanel();
+		pn3 = new JPanel();
+		pn4 = new JPanel();
+		pn5 = new JPanel();
+		
+		pn1.add(lbsoa = new JLabel("Số a:"));
+		pn1.add(soa = new JTextField(40));
+		pn2.add(lbsob = new JLabel("Số b:"));
+		pn2.add(sob = new JTextField(40));
+		pn3.add(lbsoc = new JLabel("Số c:"));
+		pn3.add(soc = new JTextField(40));
+		pn4.add(lbkq = new JLabel("Kết quả"));
+		kq = new JTextField(40);
+		kq.setEditable(false);
+		add(pn1);
+		add(pn2);
+		add(pn3);
+		add(pn4);
+		add(pn5);
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setSize(500,500);
+		getContentPane().setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+		setResizable(false);
+		setVisible(true);
+	}
+	public static void main(String[] args) {
+		new GiaiPT();
+	}
+}

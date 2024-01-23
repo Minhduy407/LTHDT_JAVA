@@ -1,0 +1,42 @@
+package ktpm18a.main;
+import java.util.Queue;
+import java.util.concurrent.ConcurrentLinkedQueue;
+import ktpm18a.duy.*;
+
+public class QuanLyKhachHang {
+	private Queue<KhachHang> khs;
+
+	
+	/**
+	 * @param khs
+	 */
+	public QuanLyKhachHang() {
+		khs = new ConcurrentLinkedQueue<KhachHang>();
+	}
+
+	/**
+	 * @return the khs
+	 */
+	public Queue<KhachHang> getKhs() {
+		return khs;
+	}
+	
+	public boolean themkhach(KhachHang x) {
+		return khs.offer(x);
+	}
+	
+	public KhachHang banve() {
+		return khs.poll();
+	}
+	
+	public KhachHang[] remove1KH(String ma) {
+		KhachHang[] tmps = new KhachHang[khs.size()];
+		int  i = 0;
+		while(khs != null) {
+			if(khs.peek().getCmnd().equalsIgnoreCase(ma))
+				khs.poll();
+			tmps[i++] = khs.poll();
+		}
+		return tmps;
+	}
+}

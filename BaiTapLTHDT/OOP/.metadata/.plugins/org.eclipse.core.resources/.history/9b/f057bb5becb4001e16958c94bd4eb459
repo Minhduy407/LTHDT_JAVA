@@ -1,0 +1,101 @@
+/*
+*@(#)JList_CheckBox.java.java  Jan 17, 2024
+*
+*Copyright (c) 2024 Chopper. All rights reserved.
+*/
+/**
+ * 
+ */
+package iuh.fit.duy;
+
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+
+/*
+* @description:
+* @author: Chopper
+* @date: Jan 17, 2024
+* @version: 1.0
+*/
+
+/**
+ * 
+ */
+public class JList_CheckBox extends JFrame{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	JPanel CenPan,WestPan,SouPan,NorPan,ButtonPan,Nor_CenPan;
+	JLabel InputNum,Title;
+	JTextField textnhap;
+	JCheckBox checkchonhapsoam;
+	JButton todensochan,todensole,todensonguyento,botoden,xoacacgiatridangtoden,tonggiatri,nhap,dong;
+	JList<Integer> list_num;
+	JScrollPane paneList;
+	public JList_CheckBox() {
+		CenPan = new JPanel();
+		WestPan = new JPanel();
+		SouPan = new JPanel();
+		NorPan = new JPanel();
+		ButtonPan = new JPanel();
+		Nor_CenPan = new JPanel();
+		//Nor
+		Title = new JLabel("Thao tác trên JList - Checkbox");
+		Title.setFont(new Font("Time New Romal",Font.BOLD,25));
+		Title.setForeground(Color.BLUE);
+		NorPan.add(Title);
+		add(NorPan,BorderLayout.NORTH);
+		
+		//West
+		ButtonPan.add(todensochan = new JButton("Tô đen số chẵn"));
+		ButtonPan.add(todensole = new JButton("Tô đen số lẻ"));
+		ButtonPan.add(todensonguyento = new JButton("Tô đen số nguyên tố"));
+		ButtonPan.add(botoden = new JButton("Bỏ tô đen"));
+		ButtonPan.add(xoacacgiatridangtoden = new JButton("Xóa các giá trị đang tô đen"));
+		ButtonPan.add(tonggiatri = new JButton("Tổng giá trị trong JList"));
+		ButtonPan.setLayout(new GridLayout(0, 1, 1, 1));
+		WestPan.add(ButtonPan);
+		WestPan.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.RED),"Chọn tác vụ"));
+		add(WestPan,BorderLayout.WEST);
+		
+		//Center
+		Nor_CenPan.add(nhap = new JButton("Nhập"));
+		Nor_CenPan.add(textnhap = new JTextField(10));
+		Nor_CenPan.add(checkchonhapsoam = new JCheckBox());
+		Nor_CenPan.add(InputNum = new JLabel("Cho nhập số âm"));
+		Nor_CenPan.add(list_num = new JList<Integer>());
+		
+		CenPan.setLayout(new BorderLayout());
+		CenPan.add(Nor_CenPan,BorderLayout.NORTH);
+		CenPan.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.RED),"Nhập thông tin:"));
+		add(CenPan,BorderLayout.CENTER);
+		
+		//South
+		SouPan.add(dong = new JButton("Đóng chương trình"));
+		SouPan.setBackground(Color.gray);
+		add(SouPan,BorderLayout.SOUTH);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+		setLocation(100,100);
+		setSize(700,700);
+	}
+	public static void main(String[] args) {
+		new JList_CheckBox();
+	}
+}
